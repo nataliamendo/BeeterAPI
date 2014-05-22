@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Beeter Example</title>
+	</head>
+	<body>
+		<h1>Beeter Example</h1>
+		<div id="stings-container">
+			<form id="create-sting-form">
+				<label>Subject</label><br>
+				<input type="text" style="width:400px;"  size="50" id="create-subject"><br>
+			
+				<label>Content</label><br>
+				<textarea rows="4" style="width:400px;"  cols="50" id="create-content" form="create-sting-form"></textarea>
+			</form>
+			
+			<button type="button" id="button-create-sting">Create</button>
+
+			<div id="stings-collection">
+			</div>
+		</div>
+
+		<div id="sting-detail" style="display: none;">
+			<h2 id="subject"></h2>
+			<p id="content"></p>
+			<p id="author" style="font-size:small;"></p>
+			<p id="modified" style="font-size:small;"></p>
+			<a id="back-to-stings"/>Stings<a>
+			<button id="edit-sting"/>Edit</button>
+			<button id="delete-sting"/>Delete</button>
+
+			<form id="edit-sting-form" hidden>
+				<label>Subject</label><br>
+				<input type="text" style="width:400px;"  size="50" id="edit-subject"><br>
+			
+				<label>Content</label><br>
+				<textarea rows="4" style="width:400px;"  cols="50" id="edit-content" form="create-sting-form"></textarea><br>
+				<button id="edit-ok"/>Ok</button>
+				<button id="edit-cancel"/>Cancel</button>
+			</form>
+		</div>
+		<!-- Scripts -->
+			<!-- jQuery 1.11.0 development -->
+		<script src="http://code.jquery.com/jquery-1.11.0.js"></script>
+		<!--<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>-->
+		<!-- link-headers -->
+		<script src="./js/uritemplate.js"></script>
+		<script src="./js/linkheaders.js"></script>
+		<!-- jQuery Base64 plugin -->
+		<script src="./js/jquery.base64.js"></script>
+		<!-- Beeter js -->
+		<script src="./js/api.js"></script>
+		<script src="./js/main.js"></script>
+	</body>
+</html>
